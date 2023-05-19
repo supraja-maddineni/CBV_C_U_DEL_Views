@@ -1,0 +1,17 @@
+{% extends 'app/dummy.html' %}
+{% block title %}
+    <title>Details</title>
+{% endblock %}
+
+{% block body_block %}
+    <h1>Details Of {{sclobject.name}} object</h1>
+    <h1>Name Of School is {{sclobject.name}}</h1>
+    <h1>Principal Of School Is {{sclobject.principal}}</h1>
+    <h1>Location Of school Is {{sclobject.location}}</h1>
+
+    <h1>Details Of Students Are</h1>
+    {% for i in sclobject.students.all %}
+        <h5>Name Of The Student Is {{i.sname}}</h5>
+        <h5>Age Of Student Is {{i.sage}}</h5>
+    {% endfor %}
+{% endblock %}
