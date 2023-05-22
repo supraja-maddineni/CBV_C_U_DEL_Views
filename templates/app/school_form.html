@@ -1,0 +1,22 @@
+{% extends 'app/dummy.html' %}
+{% block title %}
+    <title>Create Page</title>
+{% endblock %}
+
+{% block body_block %}
+    <h1 style="background-color: aquamarine;">Fill The Form To Insert Data</h1>
+        <form  method="POST">
+            {% csrf_token %}
+
+            {{form.as_p}}
+
+        {% if form.instance.pk %}
+            <input type="submit" value="Update" class="btn btn-Secondary">
+
+        {% else %}
+            <input type="submit" value="Create" class="btn btn-Secondary">
+
+        {% endif %}
+        </form>
+
+{% endblock %}

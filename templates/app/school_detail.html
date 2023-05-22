@@ -14,4 +14,10 @@
         <h5>Name Of The Student Is {{i.sname}}</h5>
         <h5>Age Of Student Is {{i.sage}}</h5>
     {% endfor %}
+
+
+
+<h5><a href="{% url 'SchoolUpdate' pk=sclobject.pk %}" class="btn btn-primary">UpdateData</a></h5>
+<h5><a href="{% url 'SchoolDelete' pk=sclobject.pk %}" class="btn btn-danger">DeleteData</a></h5>
+
 {% endblock %}
